@@ -5,7 +5,7 @@ import path from "node:path";
 export default defineConfig(({ mode }) => {
   // If you deploy to GitHub Pages under a repo name, set VITE_BASE="/repo-name/"
   // Otherwise leave it "/" (Vercel/Netlify/custom domain).
-  const base = "/";
+  const base = "/nancy-ist-toll.de/"; // adjust as needed
 
   return {
     base,

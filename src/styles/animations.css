@@ -1,0 +1,49 @@
+@keyframes drift {
+  0% { transform: translate3d(-6%, -2%, 0); opacity: 0.65; }
+  50% { transform: translate3d(6%, 2%, 0); opacity: 0.9; }
+  100% { transform: translate3d(-6%, -2%, 0); opacity: 0.65; }
+}
+
+@keyframes runePulse {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(127,231,255,0.18)); }
+  50% { filter: drop-shadow(0 0 18px rgba(127,231,255,0.42)); }
+}
+
+.mistLayer {
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 380px at 20% 30%, var(--mist), transparent 60%),
+    radial-gradient(520px 340px at 70% 45%, var(--mist-strong), transparent 62%),
+    radial-gradient(700px 420px at 45% 70%, var(--mist), transparent 65%);
+  filter: blur(14px);
+  animation: drift 18s ease-in-out infinite;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+.mistLayer.mist2 {
+  animation-duration: 26s;
+  opacity: 0.65;
+  filter: blur(18px);
+  z-index: 1;
+}
+
+.runeGlow {
+  animation: runePulse 2.8s ease-in-out infinite;
+}
+
+@keyframes firefly {
+  0% { transform: translate(0, 0) scale(1); opacity: 0; }
+  10% { opacity: 0.9; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0.2); opacity: 0; }
+}
+
+.firefly {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(127, 231, 255, 0.95);
+  box-shadow: 0 0 10px rgba(127, 231, 255, 0.55);
+  animation: firefly 900ms ease-out forwards;
+}

@@ -37,4 +37,12 @@ See [`@vitejs/plugin-rsc`](https://github.com/vitejs/vite-plugin-react/tree/main
 
 ## Deployment
 
-See [vite-plugin-rsc-deploy-example](https://github.com/hi-ogawa/vite-plugin-rsc-deploy-example)
+This site is deployed to GitHub Pages at https://nancy-ist-toll.de
+
+The deployment is automated using GitHub Actions:
+- Push to `main` branch triggers the deployment workflow
+- The workflow builds the Vite app and deploys to GitHub Pages
+- Custom domain is configured via CNAME file
+
+Manual deployment trigger:
+- Go to Actions tab → Deploy to GitHub Pages → Run workflow

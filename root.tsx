@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState, useEffect } from "react";
 
-import { Fireflies } from "@/components/Fireflies";
+import { Fireflies } from "@/components/FireFlies";
 // import { OfferingsJar } from "@/components/OfferingsJar";
 import "@/styles/theme.css";
 import "@/styles/animations.css";
